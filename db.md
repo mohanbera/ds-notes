@@ -12,7 +12,7 @@ To understand the differences we will create a relation for user and its friends
 
 So let's make a table for user and its friends in relatainal db.
 
-|User_name|user_friend|
+|user_name|user_friend|
 |-|-|
 |A|D|
 |A|G|
