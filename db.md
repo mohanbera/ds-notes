@@ -33,7 +33,7 @@ So let's make a table for user and its friends in relatainal db.
 
 😃 Here in a single query we can find direct friends of any user, 
 ```sql
-Select user_friend from USER where user = 'A'
+Select user_friend from USER where user_name = 'A'
 ```
 But to findout indirect friends also we need to do multiple queries.
 >⚠️ Even though lot of relational DBs support recursion, with that these kind of queries we can make it in a single queries, but if we talk about the `time_complexity`, that is going to be almost the same(Ignoring the multi query network throughput time).
@@ -53,7 +53,7 @@ queue = [A] (because we are going to start with `A`)
 1. After polling the first user we will get `A`.
     - get all the friends of `A`
         ```sql
-        select user_friend from USER where user = 'A'
+        select user_friend from USER where user_name = 'A'
         ```
     - I will get [D,G]
     - PUT all into the queue cause none of them are visited yet.
